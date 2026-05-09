@@ -1,0 +1,129 @@
+/* ============================================================
+   CTF Manager — Dark theme stylesheet
+   CTFd-inspired: dark navy sidebar, lighter content area
+   ============================================================ */
+
+/* Global */
+QWidget {
+    font-family: "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    color: #e6e9ef;
+}
+
+#centralWidget {
+    background-color: #1a1d24;
+}
+
+/* ============================================================
+   Sidebar
+   ============================================================ */
+#sidebar {
+    background-color: #14171c;
+    border: none;
+}
+
+#sidebarHeader {
+    background-color: #14171c;
+}
+
+#sidebarTitle {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+#sidebarSubtitle {
+    color: #6b7280;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+#sidebarDivider {
+    color: #262a33;
+    background-color: #262a33;
+    border: none;
+    max-height: 1px;
+}
+
+#sidebarFooter {
+    color: #4b5563;
+    font-size: 11px;
+    background-color: #14171c;
+    border-top: 1px solid #262a33;
+}
+
+/* Nav buttons */
+#navButton {
+    background-color: transparent;
+    color: #b8bdc7;
+    border: none;
+    border-radius: 6px;
+    padding: 0 12px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#navButton:hover {
+    background-color: #1f232c;
+    color: #ffffff;
+}
+
+#navButton:checked {
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#navButton:checked:hover {
+    background-color: #1d4ed8;
+}
+
+/* ============================================================
+   Separator between sidebar and content
+   ============================================================ */
+#verticalSeparator {
+    color: #0f1115;
+    background-color: #0f1115;
+    border: none;
+    max-width: 1px;
+}
+
+/* ============================================================
+   Content / pages
+   ============================================================ */
+#contentArea {
+    background-color: #1a1d24;
+}
+
+#page {
+    background-color: #1a1d24;
+}
+
+#pageTitle {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+#pageSubtitle {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+#pageDivider {
+    color: #262a33;
+    background-color: #262a33;
+    border: none;
+    max-height: 1px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#placeholderText {
+    color: #4b5563;
+    font-size: 14px;
+    font-style: italic;
+}

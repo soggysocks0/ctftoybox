@@ -1,0 +1,24 @@
+{
+  "_help": "Edit values below to customize this CTF challenge. The 'id' field must be unique. Drag this entire folder onto the Add-ons page to import.",
+
+  "id":            "custom-yourname",
+  "name":          "My Custom Challenge",
+  "category":      "custom",
+  "difficulty":    "medium",
+
+  "short_desc":    "(describe what kind of challenge this is)",
+  "learning_goal": "(describe what the player learns)",
+  "hint":          "(in-challenge hint)",
+
+  "image_base":    "alpine:3.19",
+  "exposed_ports": [],
+  "build_args":    {},
+
+  "flag_template": "bluebox{custom_{challenge}_{rand}}",
+  "tags":          ["custom"],
+
+  "files": {
+    "dockerfile": "Dockerfile",
+    "flag":       "flag.txt"
+  }
+}

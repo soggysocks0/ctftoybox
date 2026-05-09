@@ -1,0 +1,27 @@
+{
+  "_help": "Edit values below to customize this CTF challenge. The 'id' field must be unique. Drag this entire folder onto the Add-ons page to import.",
+
+  "id":            "for-custom-yourname",
+  "name":          "My Custom Forensics Challenge",
+  "category":      "forensics",
+  "difficulty":    "easy",
+
+  "short_desc":    "Recover a flag hidden inside an image artifact.",
+  "learning_goal": "Use `strings`, `exiftool`, or a hex editor to inspect file metadata and trailing bytes.",
+  "hint":          "A picture is worth a thousand words. Sometimes literally.",
+
+  "image_base":    "python:3.12-slim",
+  "exposed_ports": [],
+  "build_args": {
+    "artifact_format": "jpeg",
+    "hide_method":     "exif_comment"
+  },
+
+  "flag_template": "bluebox{for_{challenge}_{rand}}",
+  "tags":          ["forensics", "stego", "exif", "metadata", "beginner"],
+
+  "files": {
+    "builder":    "make_challenge.py",
+    "dockerfile": "Dockerfile"
+  }
+}

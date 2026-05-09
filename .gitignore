@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Build output
+build/
+dist/
+*.spec.bak
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Application data (the runtime stores stuff under ~/.ctf_manager,
+# but if a dev tests in-tree, this catches it too)
+.ctf_manager/
+.ctftoybox/

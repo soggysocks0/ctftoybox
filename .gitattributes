@@ -1,0 +1,18 @@
+* text=auto
+
+# Always use LF for shell scripts and Linux files
+*.sh        text eol=lf
+*.bash      text eol=lf
+Dockerfile  text eol=lf
+
+# Windows-only files always use CRLF
+*.ps1       text eol=crlf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+
+# Binary files — never alter
+*.png       binary
+*.ico       binary
+*.jpg       binary
+*.zip       binary
+*.deb       binary

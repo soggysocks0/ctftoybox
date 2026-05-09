@@ -1,0 +1,594 @@
+/* ============================================================
+   CTF Manager — Dark theme
+   ============================================================ */
+
+QWidget {
+    font-family: "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    color: #e6e9ef;
+}
+
+#centralWidget { background-color: #1a1d24; }
+
+/* ---------- Sidebar ---------- */
+#sidebar { background-color: #14171c; border: none; }
+#sidebarHeader { background-color: #14171c; }
+#sidebarTitle { color: #ffffff; font-size: 16px; font-weight: 600; letter-spacing: 0.3px; }
+#sidebarSubtitle { color: #6b7280; font-size: 11px; margin-top: 2px; }
+#sidebarDivider { color: #262a33; background-color: #262a33; border: none; max-height: 1px; }
+#sidebarFooter {
+    color: #4b5563;
+    font-size: 11px;
+    background-color: #14171c;
+    border-top: 1px solid #262a33;
+}
+#sidebarFooterContainer {
+    background-color: #14171c;
+    border-top: 1px solid #262a33;
+}
+
+/* Nav buttons */
+#navButton {
+    background-color: transparent;
+    color: #b8bdc7;
+    border: none;
+    border-radius: 6px;
+    padding: 0 12px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
+}
+#navButton:hover { background-color: #1f232c; color: #ffffff; }
+#navButton:checked { background-color: #2563eb; color: #ffffff; font-weight: 600; }
+#navButton:checked:hover { background-color: #1d4ed8; }
+
+/* Footer buttons (theme toggle, FAQ) — flat icon-style */
+#footerButton {
+    background-color: transparent;
+    color: #b8bdc7;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    text-align: left;
+    font-size: 12px;
+}
+#footerButton:hover { background-color: #1f232c; color: #ffffff; }
+#footerButton:pressed { background-color: #262a33; }
+
+/* ---------- Vertical separator ---------- */
+#verticalSeparator { color: #0f1115; background-color: #0f1115; border: none; max-width: 1px; }
+
+/* ---------- Content / pages ---------- */
+#contentArea { background-color: #1a1d24; }
+#page { background-color: #1a1d24; }
+#pageTitle { color: #ffffff; font-size: 24px; font-weight: 600; letter-spacing: 0.2px; }
+#pageSubtitle { color: #9ca3af; font-size: 13px; }
+#pageDivider {
+    color: #262a33; background-color: #262a33; border: none;
+    max-height: 1px; margin-top: 4px; margin-bottom: 4px;
+}
+#placeholderText { color: #4b5563; font-size: 14px; font-style: italic; }
+
+/* ---------- Page header bar (title + deploy button row) ---------- */
+#pageHeaderBar { background-color: transparent; }
+
+/* ---------- Deploy button (QToolButton with menu) ---------- */
+#deployButton {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+    border-radius: 6px;
+    padding: 8px 16px;
+    padding-right: 28px;   /* room for arrow */
+    font-size: 13px;
+    font-weight: 600;
+}
+#deployButton:hover { background-color: #1d4ed8; border-color: #1d4ed8; }
+#deployButton:pressed { background-color: #1e40af; }
+#deployButton::menu-indicator {
+    subcontrol-origin: padding;
+    subcontrol-position: right center;
+    right: 8px;
+    width: 12px;
+    height: 12px;
+}
+
+/* ---------- Drop-down menu (deploy categories) ---------- */
+QMenu {
+    background-color: #1f232c;
+    color: #e6e9ef;
+    border: 1px solid #2d3340;
+    border-radius: 8px;
+    padding: 6px;
+}
+QMenu::item {
+    background-color: transparent;
+    padding: 8px 32px 8px 14px;
+    border-radius: 4px;
+    margin: 1px 2px;
+    font-size: 13px;
+}
+QMenu::item:selected { background-color: #2563eb; color: #ffffff; }
+QMenu::separator {
+    height: 1px;
+    background-color: #2d3340;
+    margin: 4px 8px;
+}
+QMenu::icon { padding-left: 8px; }
+
+/* ---------- Tooltips ---------- */
+QToolTip {
+    background-color: #1f232c;
+    color: #e6e9ef;
+    border: 1px solid #2d3340;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* ============================================================
+   Instance list & cards
+   ============================================================ */
+#instanceScroll { background-color: transparent; border: none; }
+#instanceListContainer { background-color: transparent; }
+
+#instanceCard {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 8px;
+}
+#instanceCard:hover {
+    border-color: #374151;
+}
+
+#instanceCardName {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+#instanceCardCategory {
+    color: #9ca3af;
+    font-size: 11px;
+    background-color: #262a33;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+#instanceCardSub {
+    color: #9ca3af;
+    font-size: 12px;
+}
+#instanceCardId {
+    color: #4b5563;
+    font-size: 11px;
+}
+
+/* Status pills */
+#statusPillGenerated {
+    background-color: #1e3a8a; color: #bfdbfe;
+    border-radius: 10px; font-size: 11px; font-weight: 600;
+}
+#statusPillBuilding {
+    background-color: #78350f; color: #fde68a;
+    border-radius: 10px; font-size: 11px; font-weight: 600;
+}
+#statusPillStopped {
+    background-color: #374151; color: #d1d5db;
+    border-radius: 10px; font-size: 11px; font-weight: 600;
+}
+#statusPillRunning {
+    background-color: #064e3b; color: #6ee7b7;
+    border-radius: 10px; font-size: 11px; font-weight: 600;
+}
+#statusPillError {
+    background-color: #7f1d1d; color: #fecaca;
+    border-radius: 10px; font-size: 11px; font-weight: 600;
+}
+
+/* Card action buttons */
+#cardActionPrimary {
+    background-color: #2563eb; color: #ffffff; border: none;
+    border-radius: 5px; padding: 6px 14px; font-size: 12px; font-weight: 600;
+}
+#cardActionPrimary:hover { background-color: #1d4ed8; }
+#cardActionPrimary:disabled { background-color: #1e3a8a; color: #6b7280; }
+
+#cardActionSecondary {
+    background-color: #374151; color: #e6e9ef; border: none;
+    border-radius: 5px; padding: 6px 14px; font-size: 12px; font-weight: 600;
+}
+#cardActionSecondary:hover { background-color: #4b5563; }
+#cardActionSecondary:disabled { background-color: #262a33; color: #6b7280; }
+
+#cardActionGhost {
+    background-color: transparent; color: #9ca3af;
+    border: 1px solid #374151; border-radius: 5px;
+    padding: 6px 12px; font-size: 12px;
+}
+#cardActionGhost:hover { background-color: #262a33; color: #e6e9ef; }
+#cardActionGhost:disabled { color: #4b5563; border-color: #262a33; }
+
+#cardActionDanger {
+    background-color: transparent; color: #9ca3af;
+    border: 1px solid #374151; border-radius: 5px;
+    padding: 6px 10px; font-size: 14px; font-weight: 600;
+    min-width: 24px;
+}
+#cardActionDanger:hover { background-color: #7f1d1d; color: #fecaca; border-color: #7f1d1d; }
+
+/* Empty state */
+#emptyStateTitle {
+    color: #9ca3af; font-size: 18px; font-weight: 500;
+}
+
+/* ============================================================
+   Deploy wizard dialog
+   ============================================================ */
+QDialog { background-color: #1a1d24; }
+
+#wizardHeader { background-color: #14171c; }
+#wizardTitle { color: #ffffff; font-size: 18px; font-weight: 600; }
+#wizardStep { color: #9ca3af; font-size: 12px; }
+#wizardDivider { color: #262a33; background-color: #262a33; border: none; max-height: 1px; }
+#wizardFooter { background-color: #14171c; }
+
+#wizardDot { color: #374151; font-size: 14px; }
+#wizardDot[state="current"] { color: #2563eb; }
+#wizardDot[state="done"] { color: #1e40af; }
+
+#wizardIntro { color: #d1d5db; font-size: 13px; }
+#wizardHint  { color: #6b7280; font-size: 12px; }
+#wizardFieldLabel { color: #9ca3af; font-size: 12px; font-weight: 500; }
+
+#wizardLineEdit, #wizardSpinBox {
+    background-color: #1f232c;
+    color: #ffffff;
+    border: 1px solid #374151;
+    border-radius: 5px;
+    padding: 4px 8px;
+    selection-background-color: #2563eb;
+}
+#wizardLineEdit:focus, #wizardSpinBox:focus {
+    border-color: #2563eb;
+}
+
+#wizardList {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 6px;
+    padding: 4px;
+    outline: none;
+}
+#wizardList::item { padding: 8px 10px; border-radius: 4px; }
+#wizardList::item:selected { background-color: #2563eb; color: #ffffff; }
+#wizardList::item:hover:!selected { background-color: #262a33; }
+
+#wizardDetailPanel {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 6px;
+}
+#wizardDetailName { color: #ffffff; font-size: 14px; }
+#wizardDetailDesc { color: #d1d5db; font-size: 12px; }
+#wizardDetailMeta { color: #9ca3af; font-size: 12px; }
+
+#wizardReviewKey { color: #9ca3af; font-size: 12px; font-weight: 600; min-width: 90px; }
+#wizardReviewValue { color: #e6e9ef; font-size: 13px; }
+
+#wizardPrimaryBtn {
+    background-color: #2563eb; color: #ffffff; border: 1px solid #2563eb;
+    border-radius: 5px; padding: 7px 18px; font-weight: 600; font-size: 13px;
+}
+#wizardPrimaryBtn:hover { background-color: #1d4ed8; border-color: #1d4ed8; }
+
+#wizardSecondaryBtn {
+    background-color: transparent; color: #d1d5db;
+    border: 1px solid #374151; border-radius: 5px;
+    padding: 7px 16px; font-size: 13px;
+}
+#wizardSecondaryBtn:hover { background-color: #262a33; color: #ffffff; }
+#wizardSecondaryBtn:disabled { color: #4b5563; border-color: #262a33; }
+
+/* ============================================================
+   Add-ons / drop zone
+   ============================================================ */
+#dropZone {
+    background-color: #1a1d24;
+    border: 2px dashed #374151;
+    border-radius: 10px;
+}
+#dropZone[hover="true"] {
+    background-color: #1f232c;
+    border-color: #2563eb;
+}
+#dropZoneIcon { color: #4b5563; font-size: 36px; }
+#dropZoneTitle { color: #d1d5db; font-size: 16px; font-weight: 600; }
+#dropZoneHint  { color: #9ca3af; font-size: 12px; }
+
+#addonsSectionHeader {
+    color: #9ca3af; font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.6px;
+    margin-top: 8px;
+}
+#addonsRecentList {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 6px;
+    color: #d1d5db;
+    font-size: 12px;
+}
+
+/* ============================================================
+   System Templates page
+   ============================================================ */
+#calloutWarning {
+    background-color: #422006; color: #fde68a;
+    border: 1px solid #78350f; border-radius: 6px;
+    padding: 10px 14px; font-size: 12px;
+}
+
+#systemTemplateRow {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 8px;
+}
+#systemTemplateRow:hover { border-color: #374151; }
+
+#systemTemplateName { color: #ffffff; font-size: 14px; font-weight: 600; }
+#systemTemplateBadge {
+    color: #bfdbfe;
+    background-color: #1e3a8a;
+    padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; font-weight: 500;
+}
+#systemTemplateSummary { color: #9ca3af; font-size: 12px; }
+
+/* ============================================================
+   Management page
+   ============================================================ */
+#mgmtSectionHeader {
+    color: #9ca3af; font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.6px;
+    padding-bottom: 4px;
+}
+
+#mgmtInstanceList {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 6px;
+    padding: 4px;
+    outline: none;
+}
+#mgmtInstanceList::item {
+    padding: 8px 10px;
+    border-radius: 4px;
+    color: #e6e9ef;
+}
+#mgmtInstanceList::item:selected { background-color: #2563eb; color: #ffffff; }
+#mgmtInstanceList::item:hover:!selected { background-color: #262a33; }
+
+#mgmtDetailHeader {
+    color: #ffffff; font-size: 15px;
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+
+#mgmtPanel {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 8px;
+}
+#mgmtPanelTitle {
+    color: #ffffff; font-size: 13px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #262a33;
+}
+#mgmtFieldKey { color: #9ca3af; font-size: 12px; }
+#mgmtFieldValue { color: #e6e9ef; font-size: 13px; }
+#mgmtFieldHint  { color: #6b7280; font-size: 11px; }
+
+#mgmtProgressBar {
+    background-color: #14171c;
+    border: 1px solid #262a33;
+    border-radius: 4px;
+    color: #e6e9ef;
+    font-size: 11px;
+    text-align: center;
+    height: 16px;
+}
+#mgmtProgressBar::chunk {
+    background-color: #2563eb;
+    border-radius: 3px;
+}
+
+#mgmtAuditLog {
+    background-color: #14171c;
+    color: #d1d5db;
+    border: 1px solid #262a33;
+    border-radius: 4px;
+    font-family: "Consolas", "Menlo", "Courier New", monospace;
+    font-size: 11px;
+    padding: 8px;
+}
+
+/* ============================================================
+   Tier badges (System Templates page)
+   ============================================================ */
+#tierBadge_easy {
+    background-color: #064e3b; color: #6ee7b7;
+    padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; font-weight: 600;
+}
+#tierBadge_medium {
+    background-color: #78350f; color: #fde68a;
+    padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; font-weight: 600;
+}
+#tierBadge_hard {
+    background-color: #7f1d1d; color: #fecaca;
+    padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; font-weight: 600;
+}
+
+/* ============================================================
+   System template dialog
+   ============================================================ */
+#dialogBullet {
+    background-color: #14171c;
+    border: 1px solid #262a33;
+    border-radius: 6px;
+}
+#dialogBulletTitle { color: #ffffff; font-size: 12px; font-weight: 600; }
+#dialogBulletBody  { color: #9ca3af; font-size: 12px; }
+
+#wizardCheckbox {
+    color: #e6e9ef;
+    font-size: 12px;
+    spacing: 8px;
+    padding: 4px 0;
+}
+#wizardCheckbox::indicator {
+    width: 16px; height: 16px;
+    border: 1px solid #374151;
+    border-radius: 3px;
+    background-color: #1f232c;
+}
+#wizardCheckbox::indicator:hover { border-color: #2563eb; }
+#wizardCheckbox::indicator:checked {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    image: none;
+}
+
+/* ============================================================
+   Settings page
+   ============================================================ */
+#settingsSection {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 8px;
+}
+#settingsSectionTitle {
+    color: #ffffff; font-size: 14px; font-weight: 600;
+    letter-spacing: 0.2px;
+}
+#settingsSectionDesc { color: #9ca3af; font-size: 12px; }
+#settingsFieldLabel  { color: #d1d5db; font-size: 12px; font-weight: 500; }
+#settingsFieldHint   { color: #6b7280; font-size: 11px; }
+
+#settingsCombo {
+    background-color: #14171c;
+    color: #e6e9ef;
+    border: 1px solid #374151;
+    border-radius: 5px;
+    padding: 5px 10px;
+    min-height: 26px;
+}
+#settingsCombo:focus  { border-color: #2563eb; }
+#settingsCombo::drop-down { border: none; width: 18px; }
+#settingsCombo QAbstractItemView {
+    background-color: #1f232c;
+    color: #e6e9ef;
+    border: 1px solid #2d3340;
+    selection-background-color: #2563eb;
+}
+
+#settingsLineEdit {
+    background-color: #14171c;
+    color: #e6e9ef;
+    border: 1px solid #374151;
+    border-radius: 5px;
+    padding: 4px 8px;
+    selection-background-color: #2563eb;
+}
+#settingsLineEdit:focus { border-color: #2563eb; }
+
+#settingsCheckbox {
+    color: #e6e9ef;
+    font-size: 13px;
+    spacing: 8px;
+}
+#settingsCheckbox::indicator {
+    width: 16px; height: 16px;
+    border: 1px solid #374151;
+    border-radius: 3px;
+    background-color: #14171c;
+}
+#settingsCheckbox::indicator:hover    { border-color: #2563eb; }
+#settingsCheckbox::indicator:checked  {
+    background-color: #2563eb; border-color: #2563eb; image: none;
+}
+
+/* ============================================================
+   Storage page
+   ============================================================ */
+#storageSectionHeader {
+    color: #9ca3af; font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.6px;
+    padding-bottom: 4px;
+}
+#storageTree, #storageFilesTree {
+    background-color: #1f232c;
+    color: #e6e9ef;
+    border: 1px solid #262a33;
+    border-radius: 6px;
+    padding: 4px;
+    outline: none;
+}
+#storageTree::item, #storageFilesTree::item {
+    padding: 4px 6px;
+    border-radius: 3px;
+}
+#storageTree::item:selected, #storageFilesTree::item:selected {
+    background-color: #2563eb; color: #ffffff;
+}
+#storageTree::item:hover:!selected, #storageFilesTree::item:hover:!selected {
+    background-color: #262a33;
+}
+#storageFilesTree QHeaderView::section {
+    background-color: #14171c;
+    color: #9ca3af;
+    border: none;
+    border-bottom: 1px solid #262a33;
+    padding: 6px 8px;
+    font-size: 11px;
+}
+
+#storageDetailHeader {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 14px;
+}
+
+/* ============================================================
+   Networking page
+   ============================================================ */
+#networkingRow {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 8px;
+}
+#networkingRow:hover { border-color: #374151; }
+
+#networkingRowSub  { color: #9ca3af; font-size: 11px; }
+#networkingFieldKey {
+    color: #9ca3af; font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    padding-bottom: 4px;
+}
+#networkingFieldValue { color: #e6e9ef; font-size: 12px; }
+#networkingFieldHint  { color: #6b7280; font-size: 12px; }
+
+/* ============================================================
+   Add-on scaffold rows
+   ============================================================ */
+#scaffoldRow {
+    background-color: #1f232c;
+    border: 1px solid #262a33;
+    border-radius: 8px;
+}
+#scaffoldRow:hover { border-color: #374151; }

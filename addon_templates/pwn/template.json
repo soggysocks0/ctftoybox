@@ -1,0 +1,29 @@
+{
+  "_help": "Edit values below to customize this CTF challenge. The 'id' field must be unique. The 'name' is what the player sees. Drag this entire folder onto the Add-ons page to import.",
+
+  "id":            "pwn-custom-yourname",
+  "name":          "My Custom Pwn",
+  "category":      "binary_exploitation",
+  "difficulty":    "easy",
+
+  "short_desc":    "Stack buffer overflow — redirect execution to win().",
+  "learning_goal": "Identify an unchecked input call, find the offset, overwrite the saved RIP.",
+  "hint":          "There's a function in the binary that's never called from main…",
+
+  "image_base":    "ubuntu:22.04",
+  "exposed_ports": [31337],
+  "build_args": {
+    "lang":            "c",
+    "compile_flags":   "-no-pie -fno-stack-protector -z execstack",
+    "service_wrapper": "socat"
+  },
+
+  "flag_template": "bluebox{pwn_{challenge}_{rand}}",
+  "tags":          ["pwn", "buffer-overflow", "ret2win", "beginner"],
+
+  "files": {
+    "source":     "chall.c",
+    "flag":       "flag.txt",
+    "dockerfile": "Dockerfile"
+  }
+}

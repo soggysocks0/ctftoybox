@@ -1,0 +1,27 @@
+{
+  "_help": "Edit the values below to customize this CTF challenge. The 'id' field must be unique. The 'name' is what the player sees. Drag this entire folder onto the Add-ons page to import.",
+
+  "id":            "re-custom-yourname",
+  "name":          "My Custom Crackme",
+  "category":      "reverse_engineering",
+  "difficulty":    "easy",
+
+  "short_desc":    "Find the password baked into the binary.",
+  "learning_goal": "Use `strings` or a decompiler to recover a hardcoded value.",
+  "hint":          "Try running `strings` on the binary first.",
+
+  "image_base":    "gcc:12-bookworm",
+  "exposed_ports": [],
+  "build_args": {
+    "lang":          "c",
+    "compile_flags": "-O0 -no-pie -fno-stack-protector"
+  },
+
+  "flag_template": "bluebox{re_{challenge}_{rand}}",
+  "tags":          ["crackme", "strings", "beginner"],
+
+  "files": {
+    "source":     "chall.c",
+    "dockerfile": "Dockerfile"
+  }
+}
