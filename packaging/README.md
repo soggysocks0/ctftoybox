@@ -40,7 +40,7 @@ Users double-click `CTFToyBox.exe` to run. No Python install required.
 **Smart Screen warning:** On first launch, Windows may show a "Windows
 protected your PC" dialog because the binary isn't code-signed. Users
 click "More info" → "Run anyway". This is normal for unsigned indie
-software; getting rid of it requires buying a code-signing certificate.
+software (im not buying a code signing cert lol)
 
 ---
 
@@ -82,7 +82,7 @@ Two artifacts get produced in `dist/`:
 
 ### 4. How users install
 
-**Debian-based distros (the easy path):**
+**Debian-based distros:**
 
 ```bash
 sudo apt install ./ctftoybox_0.1.0_amd64.deb
@@ -103,8 +103,6 @@ chmod +x CTFToyBox
 ./CTFToyBox
 ```
 
-That's it — the binary is fully self-contained.
-
 ### 5. Notes for users
 
 - **Docker required for challenge deployment.** Without Docker the app
@@ -113,22 +111,6 @@ That's it — the binary is fully self-contained.
 - Generated artifacts live in `~/.ctf_manager/`, just like in the
   source-run version. (See the project rename note in the main README
   if/when this path changes.)
-
----
-
-## Tweaks you might want
-
-- **Add an icon.** Drop a `.ico` (Windows) or `.png` (Linux) into
-  `packaging/`, then in `ctftoybox.spec` change the `EXE(...)` block to
-  pass `icon='packaging/icon.ico'`. Rebuild.
-- **Code-sign the Windows exe.** Requires a code-signing certificate.
-  Add `signtool sign /f cert.pfx /p PASSWORD dist\CTFToyBox.exe` to
-  `build-windows.ps1` after the PyInstaller step.
-- **Bump version.** Edit the `VERSION` default in `build-linux.sh`.
-  Also update the version string shown in `ui/sidebar.py` (`v0.1.0`
-  label at the bottom of the sidebar).
-
----
 
 ## Troubleshooting
 
@@ -146,9 +128,3 @@ tables in `generators/dispatch.py` and
 `system_templates/dispatch.py` import generators dynamically; if you add
 a new one, also add it to the `hiddenimports` list in `ctftoybox.spec`
 so PyInstaller bundles it.
-
-**The `.exe` is huge (~150 MB).** That's PyQt6 — Qt's libraries are big.
-You can shave 20-30 MB by adding `--exclude-module` for things you
-don't need (already in the spec for tkinter / matplotlib / numpy).
-Don't try to exclude any `PyQt6.*` submodule unless you're sure — Qt is
-finicky about which pieces are loaded together.
