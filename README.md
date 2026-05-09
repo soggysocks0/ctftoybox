@@ -1,13 +1,16 @@
 # CTFToyBox
 
-> A CTFd-inspired desktop app for deploying and managing CTF challenge instances.
+> A CTFd-inspired desktop app for easy deployment and management of CTF challenge instances.
 
 <img width="1202" height="782" alt="menu1" src="https://github.com/user-attachments/assets/483722ec-9495-4c35-82fb-dc641ca5d251" />
 
 ## Features
-- Deploy CTF challenges (RE / Pwn / Web / Forensics / Custom) via Docker
+- Runs on local systems, perfect for the classroom, clubs or competitions
+- Easy, accessible and fast
+- Easily deploy CTF challenges (RE / Pwn / Web / Forensics / Custom) via Docker
 - Generate vulnerable system templates (Win11 / Ubuntu, easy / med / hard)
 - Live container monitoring with audit logs
+- Add custom user-made CTF/Image challenges and templates
 - Cross-platform (Windows / Linux)
 - Dark and light themes
 
