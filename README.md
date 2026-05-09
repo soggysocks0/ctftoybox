@@ -2,7 +2,7 @@
 
 > A CTFd-inspired desktop app for deploying and managing CTF challenge instances.
 
-[screenshot here — see "Screenshots" note below]
+<img width="1202" height="782" alt="menu1" src="https://github.com/user-attachments/assets/483722ec-9495-4c35-82fb-dc641ca5d251" />
 
 ## Features
 - Deploy CTF challenges (RE / Pwn / Web / Forensics / Custom) via Docker
