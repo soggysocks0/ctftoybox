@@ -14,6 +14,9 @@
 - Cross-platform (Windows / Linux)
 - Dark and light themes
 
+## USAGE
+See [packaging/README.md](USAGE.md).
+
 ## Install
 
 ### Windows
