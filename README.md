@@ -15,7 +15,7 @@
 - Dark and light themes
 
 ## USAGE
-See [packaging/README.md](USAGE.md).
+See [USAGE.md](USAGE.md).
 
 ## Install
 
